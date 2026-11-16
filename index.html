@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A3 Overhead Book Scanner — Windows desktop application for capturing and processing book pages and registers.">
+<title>A3 Overhead Book Scanner</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#121d30;--line:#283950;--text:#edf3fa;--muted:#a9b8ca;--accent:#60a5fa;--green:#76d6a2}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#1c3556 0,transparent 48%),var(--bg);color:var(--text);font:16px/1.6 system-ui,Segoe UI,sans-serif}main{max-width:1050px;margin:auto;padding:48px 22px 72px}.tag{color:var(--green);font-weight:700;letter-spacing:.09em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;max-width:850px;margin:15px 0}p{color:var(--muted)}.lead{font-size:1.2rem;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 36px}a.btn{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#071321;text-decoration:none;font-weight:700}a.alt{background:transparent;color:var(--text);border:1px solid var(--line)}.panel{background:color-mix(in srgb,var(--panel) 92%,transparent);border:1px solid var(--line);border-radius:18px;padding:23px;margin:18px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{padding:18px;background:#0d1728;border:1px solid var(--line);border-radius:14px}.card h3{margin:0 0 5px}.card p{margin:0}.steps{padding-left:20px;color:var(--muted)}code{color:#c7ddff;background:#0b1422;padding:2px 6px;border-radius:5px}.note{font-size:.9rem}footer{margin-top:42px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.9rem}
+</style></head>
+<body><main>
+<div class="tag">Windows desktop project · Python · OpenCV</div>
+<h1>A3 Overhead Book Scanner</h1>
+<p class="lead">Digitise A3 registers and book spreads with a UVC webcam or existing image files. Capture pages, correct perspective, enhance images, split spreads and export multi-page PDFs.</p>
+<div class="actions"><a class="btn" href="https://github.com/shashankshashank4023-cmyk/A3-Overhead-Book-Scanner-/">View source on GitHub</a><a class="btn alt" href="https://github.com/shashankshashank4023-cmyk/A3-Overhead-Book-Scanner-/actions">Builds &amp; test results</a></div>
+<section class="panel"><h2>What the application does</h2><div class="grid">
+<div class="card"><h3>Camera capture</h3><p>Requests 3840×2160 MJPG where supported and reports the camera's negotiated resolution.</p></div>
+<div class="card"><h3>Page correction</h3><p>Detects a plausible page quadrilateral and applies perspective correction, with a safe frame fallback.</p></div>
+<div class="card"><h3>Image enhancement</h3><p>Document, colour and grayscale processing modes.</p></div>
+<div class="card"><h3>Book spreads</h3><p>Optional left/right split for landscape two-page captures.</p></div>
+<div class="card"><h3>PDF export</h3><p>Save captured pages as a multi-page PDF or preserve a session with a JSON manifest.</p></div>
+<div class="card"><h3>Windows build</h3><p>GitHub Actions runs tests and creates a downloadable Windows build artifact.</p></div>
+</div></section>
+<section class="panel"><h2>Run on Windows 10/11</h2><ol class="steps"><li>Install 64-bit Python 3.10–3.12 and connect a UVC-compatible webcam.</li><li>Download or clone the repository.</li><li>Run <code>run_windows.bat</code> to install dependencies and launch the app.</li><li>Choose <b>Start Camera</b> or <b>Open Image Folder</b>; press Space to capture.</li><li>Use <b>Export PDF</b> to save a document.</li></ol><p class="note">The desktop scanner does not run inside this website. This page is a project overview and download/CI portal.</p></section>
+<section class="panel"><h2>Hardware validation note</h2><p>A 4K capture request does not guarantee a 4K stream. Actual resolution, frame rate, focus, lighting and page-detection quality must be checked with the target webcam and Windows PC. This prototype does not provide OCR or searchable PDFs.</p></section>
+<footer>Open-source project · MIT License · <a href="https://github.com/shashankshashank4023-cmyk" style="color:#9fc9ff">GitHub profile</a></footer>
+</main></body></html>
